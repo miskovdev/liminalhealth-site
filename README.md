@@ -12,7 +12,7 @@ Requirements:
 
 Run powershell or terminal in the project folder and run
 
-    `npm install`
+    npm install
 
 After packages installation you'll be able to:
 
