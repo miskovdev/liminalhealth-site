@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d31561ee-6976-40db-a9f6-a1415a295c17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html-ui-with-charts/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html-ui-with-charts/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html-ui-with-charts/dashboard2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html-ui-with-charts/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html-ui-with-charts/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html-ui-with-charts/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/css/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-26 190310.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 033805.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041447.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041510.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041525.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041540.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041556.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041611.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-html/layout-parts/Screenshot 2022-12-28 041623.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +56,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674060967033</updated>
-      <workItem from="1674060968257" duration="1231000" />
+      <workItem from="1674060968257" duration="1642000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

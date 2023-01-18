@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>LiminalHealth - Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc/dist/chartjs-plugin-datalabels.min.js"></script
+</head>
+<body class="dark">
+    <main class="app">
+        <header class="header header-dark">
+            <div class="container">
+                <div class="header-mobile">
+                    <a href="." class="header-link-home"><img src="images/logo.svg" height="36" alt="logo"></a>
+                    <div class="labeled-selector">
+                        <span>View:</span>
+                        <select name="view">
+                            <option value="1">IDR Process Performance</option>
+                            <option value="2">Negotiation Process Performance</option>
+                        </select>
+                    </div>
+                    <a href="#" class="header-menu-open"><i class="fa-solid fa-bars"></i></a>
+                    <div class="header-nav-mobile">
+                        <ul>
+                            <li class="active"><a href="dashboard.html"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a></li>
+                            <li><a href="index.html"><i class="fa-solid fa-list"></i> Claims</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Negotiations</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gavel"></i> Disputes</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <nav class="nav-left">
+                        <ul>
+                            <li><a href="." class="header-link-home"><img src="images/logo.svg" height="36" alt="logo"></a></li>
+                            <li class="active"><a href="dashboard.html"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a></li>
+                            <li><a href="index.html"><i class="fa-solid fa-list"></i> Claims</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Negotiations</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gavel"></i> Disputes</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav-right">
+                        <div class="labeled-selector">
+                            <span>Current View:</span>
+                            <select name="view" id="view">
+                                <option value="1">IDR Process Performance</option>
+                                <option value="2">Negotiation Process Performance</option>
+                            </select>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="app-grid">
+            <div class="container">
+                <div class="app-grid-box-transparent">
+                    <div class="stats-flex">
+                        <div class="stats-item stats-item--lightblue flex-25">
+                            <h3 class="stats-item-name">Revenue</h3>
+                            <div class="stats-item-value">$ 22.5 M</div>
+                            <div class="stats-item-detail">Q3 2022: $ 20.0 M</div>
+                        </div>
+                        <div class="stats-item stats-item--blue flex-25">
+                            <h3 class="stats-item-name">Projected revenue</h3>
+                            <div class="stats-item-value">$ 30.2 M</div>
+                            <div class="stats-item-detail">Q4 2022: $ 25.0 M</div>
+                        </div>
+                        <div class="stats-item stats-item--red flex-25">
+                            <h3 class="stats-item-name">Lost</h3>
+                            <div class="stats-item-value">$ 1.4 M</div>
+                            <div class="stats-item-detail">Q3 2022: $ 800.0 K</div>
+                        </div>
+                        <div class="stats-item stats-item--green flex-25">
+                            <h3 class="stats-item-name">Success rate</h3>
+                            <div class="stats-item-value">89.72 %</div>
+                            <div class="stats-item-detail">Q3 2022: 90.22 %</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="app-grid-box app-grid-box--dark app-data">
+                    <div class="data-header">
+                        <div class="labeled-selector">
+                            <select name="datatype" id="type">
+                                <option value="1">Revenue vs Lost</option>
+                                <option value="2">Projected Revenue vs Success</option>
+                            </select>
+                        </div>
+                        <div class="labeled-selector">
+                            <span>By:</span>
+                            <select name="timerange" id="timerange">
+                                <option value="1">Month</option>
+                                <option value="2">Week</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="data-chart">
+                        <canvas id="areaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container-flex">
+                    <div class="app-grid-box app-grid-box--dark flex-50">
+                        <div class="data-header">
+                            <div class="labeled-selector">
+                                <span>Expiring:</span>
+                                <select name="expiring" id="expiring">
+                                    <option value="1">Cases</option>
+                                    <option value="2">Negotiations</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="data-table data-table--dark">
+                            <table>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Status</th>
+                                    <th>Expiry Date</th>
+                                    <th>Days until Expire</th>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">105888</a></td>
+                                    <td>Underpayment Confirmed</td>
+                                    <td><span class="overdue">03/10/2022</span></td>
+                                    <td><span class="overdue">-10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">202313</a></td>
+                                    <td>Draft</td>
+                                    <td><span class="overdue">03/10/2022</span></td>
+                                    <td><span class="overdue">-1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">289501</a></td>
+                                    <td>Negotiation Process</td>
+                                    <td><span class="overdue">03/12/2022</span></td>
+                                    <td><span class="overdue">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">99345</a></td>
+                                    <td>IDR Process</td>
+                                    <td><span class="overdue">03/12/2022</span></td>
+                                    <td><span class="overdue">2</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">133821</a></td>
+                                    <td>Closed - Won</td>
+                                    <td><span class="ontime">03/12/2022</span></td>
+                                    <td><span class="ontime">10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">99474</a></td>
+                                    <td>Closed - Won</td>
+                                    <td>03/12/2022</td>
+                                    <td>15</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="data-pagination">
+                            <div class="data-pagination-current">
+                                <span>1 - 10 of 125</span>
+                                <div class="data-pagination-links">
+                                    <a href="#"><i class="fa-solid fa-left-long"></i></a>
+                                    <a href="#"><i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-grid-box app-grid-box--dark flex-50">
+                        <div class="data-header">
+                            <div class="labeled-selector">
+                                <span>By status:</span>
+                                <select name="status" id="status">
+                                    <option value="1">Active</option>
+                                    <option value="2">Expired</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </main>
+</body>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>LiminalHealth - Claims</title>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <div class="container">
+                <div class="header-mobile">
+                    <a href="." class="header-link-home"><img src="images/logo.svg" height="36" alt="logo"></a>
+                    <a href="#" class="header-menu-open"><i class="fa-solid fa-bars"></i></a>
+                    <div class="header-nav-mobile">
+                        <ul>
+                            <li><a href="dashboard.html"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a></li>
+                            <li class="active"><a href="index.html"><i class="fa-solid fa-list"></i> Claims</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Negotiations</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gavel"></i> Disputes</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <nav class="nav-left">
+                        <ul>
+                            <li><a href="." class="header-link-home"><img src="images/logo.svg" height="36" alt="logo"></a></li>
+                            <li><a href="dashboard.html"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a></li>
+                            <li class="active"><a href="index.html"><i class="fa-solid fa-list"></i> Claims</a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Negotiations</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gavel"></i> Disputes</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav-right">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="app-grid">
+            <div class="container">
+                <div class="app-grid-box app-summary">
+                    <h2>Claim Summary</h2>
+                    <div class="summary-flex">
+                        <div class="summary-list">
+                            <div class="summary-item">
+                                <div class="summary-name">Initiated</div>
+                                <div class="summary-amount">20</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name">Negotiation Process</div>
+                                <div class="summary-amount">25</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name">IDR Process</div>
+                                <div class="summary-amount">30</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name">Won</div>
+                                <div class="summary-amount">100</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name">Lost</div>
+                                <div class="summary-amount">10</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name">Paid</div>
+                                <div class="summary-amount">50</div>
+                            </div>
+                        </div>
+                        <div class="summary-total">
+                            <h3 class="summary-subtitle">Total</h3>
+                            <div class="summary-total-amount">185</div>
+                            <a href="dashboard.html">View Dashboards</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="app-grid-box app-data">
+                    <h2>Claims</h2>
+                    <div class="data-header">
+                        <div class="data-header-left">
+                            <button>Open Claim</button>
+                            <button>Export</button>
+                            <button>Reset</button>
+                        </div>
+                        <div class="data-header-right">
+                            <input class="input-search" type="text" placeholder="Search...">
+                            <a href="#"><span>Adjust Columns</span><i class="fa-solid fa-circle-chevron-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="data-table">
+                        <table>
+                            <tr>
+                                <th><input type="checkbox" id="check-all"></th>
+                                <th>Claim ID <i class="fa-solid fa-sort"></i></th>
+                                <th>Payer <i class="fa-solid fa-sort"></i></th>
+                                <th>Billed Amount <i class="fa-solid fa-sort"></i></th>
+                                <th>Initial Payment <i class="fa-solid fa-sort"></i></th>
+                                <th>Total Payment <i class="fa-solid fa-sort"></i></th>
+                                <th>Status <i class="fa-solid fa-sort"></i></th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#">105888</a></td>
+                                <td>United Healthcare</td>
+                                <td>2,500.00</td>
+                                <td>80.00</td>
+                                <td>0.00</td>
+                                <td><span>Underpayment Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#">202313</a></td>
+                                <td>Aetna</td>
+                                <td>2,500.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td><span class="draft">Draft</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#">289501</a></td>
+                                <td>Cigna</td>
+                                <td>2,500.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td><span class="negotiation">Negotiation Process</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#">99345</a></td>
+                                <td>HealthPartners</td>
+                                <td>2,500.00</td>
+                                <td>200.00</td>
+                                <td>0.00</td>
+                                <td><span class="idr">IDR Process</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#">133821</a></td>
+                                <td>Capital District</td>
+                                <td>2,500.00</td>
+                                <td>0.00</td>
+                                <td>2.500.00</td>
+                                <td><span class="closed">Closed - Won</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="data-pagination">
+                        <div class="data-pagination-current">
+                            <span>1 - 10 of 185</span>
+                            <div class="data-pagination-links">
+                                <a href="#"><i class="fa-solid fa-left-long"></i></a>
+                                <a href="#"><i class="fa-solid fa-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </main>
+</body>
+<script src="js/main.js"></script>
+</html>
