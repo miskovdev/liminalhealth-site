@@ -1,0 +1,20 @@
+{
+  "name": "liminalhealth-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve --watch"
+  },
+  "author": "Eduard",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "handlebars": "^4.6.0"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1"
+  }
+}

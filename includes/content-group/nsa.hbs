@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>{{ content.title }}</h2>
+    <div class="nsa-desc">{{ content.description }}</div>
+    <div class="nsa-grid">
+        <div class="nsa-content">
+            {{{ wrapParagraph content.text }}}
+        </div>
+        {{#if (isNotEmpty content.imageUrl)}}
+            <div class="nsa-image">
+                <img src="{{ content.imageUrl }}" alt="{{ content.title }}">
+            </div>
+        {{/if}}
+    </div>
+</div>

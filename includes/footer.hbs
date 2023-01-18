@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="footer-grid">
+        <div class="footer-contacts" id="contacts">
+            <h3>{{ site.footerContactsTitle }}</h3>
+            <p><b>{{ site.phone }}</b></p>
+            <p>{{ site.schedule }}</p>
+            <div class="footer-socials">
+                {{#each site.social}}
+                    <a href="{{ this.url }}" target="_blank"><i class="fa-brands fa-{{ this.icon }}"></i></a>
+                {{/each}}
+            </div>
+        </div>
+        {{#each navigation.footer}}
+            <div class="footer-nav">
+                <h3>{{ this.title }}</h3>
+                <ul>
+                    {{#each this.links}}
+                        <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+    <div class="footer-copy">
+        <div class="footer-text">{{{ site.copyright }}}</div>
+        <div class="footer-text">
+            {{#each navigation.footerBottom}}
+                {{#if (isFirst @index)}}
+                    <a href="{{ this.url }}">{{ this.name }}</a>
+                {{else}}
+                    | <a href="{{ this.url }}">{{ this.name }}</a>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="uppercase">{{ content.title }}</h2>
+    <div class="caps-desc">{{ content.description }}</div>
+    <div class="caps-content">
+        <div class="caps-tabs">
+            {{#each content.tabs}}
+                <div class="caps-tab {{#if (isFirst @index)}}active{{/if}}" data-target="{{ @index }}">{{ this.name }}</div>
+            {{/each}}
+        </div>
+        <div class="caps-tabs-grid">
+            {{#each content.tabs}}
+                <div class="caps-tab-content {{#if (isFirst @index)}}active{{/if}}" data-id="{{ @index }}">
+                    <div class="caps-tab-text">
+                        {{{ wrapParagraph this.text }}}
+                    </div>
+                    {{#if (isNotEmpty this.imageUrl)}}
+                        <div class="caps-tab-image">
+                            <img src="{{ this.imageUrl }}" alt="{{ this.name }}">
+                        </div>
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

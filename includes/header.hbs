@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="header-mobile">
+        <a href="." class="header-link-home">
+            <img src="images/logo.svg" height="36" alt="logo">
+            <span>{{ site.sitename }}</span>
+        </a>
+        <a href="#" class="header-menu-open"><i class="fa-solid fa-bars"></i></a>
+        <div class="header-nav-mobile">
+            <div class="header-nav-container">
+                <ul>
+                    {{#each navigation.left}}
+                        {{#if (hasMenu this)}}
+                            <li class="sub-menu">
+                                <a href="{{ this.url }}">
+                                    {{ this.name }} <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    {{#each this.submenu}}
+                                        <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                        {{else}}
+                            <li>
+                                <a href="{{ this.url }}">
+                                    {{ this.name }}
+                                </a>
+                            </li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="header-nav-bottom">
+                {{#each navigation.right}}
+                    <a href="{{ this.url }}">{{ this.name }}</a>
+                {{/each}}
+                <a href="#" class="button button-black header-button open-modal">{{ navigation.action.name }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-nav">
+        <nav class="nav-left">
+            <ul>
+                <li>
+                    <a href="." class="header-link-home">
+                        <img src="images/logo.svg" height="36" alt="logo">
+                        <span>{{ site.sitename }}</span>
+                    </a>
+                </li>
+                {{#each navigation.left}}
+                    {{#if (hasMenu this)}}
+                    <li class="sub-menu">
+                        <a href="{{ this.url }}">
+                            {{ this.name }} <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            {{#each this.submenu}}
+                                <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a href="{{ this.url }}">
+                            {{ this.name }}
+                        </a>
+                    </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </nav>
+        <nav class="nav-right">
+            <ul>
+                {{#each navigation.right}}
+                    <li>
+                        <a href="{{ this.url }}">
+                            {{ this.name }}
+                        </a>
+                    </li>
+                {{/each}}
+                <li><a href="#" class="button button-black header-button open-modal">{{ navigation.action.name }}</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

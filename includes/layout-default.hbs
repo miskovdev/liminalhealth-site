@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{ site.sitename }} - {{title}}</title>
+		<link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	</head>
+    <body class="preload">
+        <main class="main">
+            <header class="header">
+                {{> header}}
+            </header>
+            <section class="main-section">
+                {{> intro}}
+            </section>
+            <section class="main-section nsa-section">
+                {{> nsa}}
+            </section>
+            <section class="main-section solutions">
+                {{> solutions}}
+            </section>
+            <section class="main-section achieves">
+                {{> achievements}}
+            </section>
+            <!-- Start of Content group -->
+            <nav class="nsa-sticky">
+                <div class="container">
+                    <ul>
+                        {{#each group.items}}
+                            <li>
+                                <a href="#{{ this.id }}">{{ this.name }}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </nav>
+            {{#each group.items}}
+                <section class="main-section {{ this.sectionClass }}" id="{{ this.id }}">
+                    {{> (groupPartial this.id) content=this.content }}
+                </section>
+            {{/each}}
+            <!-- End of Content group -->
+            {{> modal-popup}}
+
+            <footer class="footer">
+                {{> footer}}
+            </footer>
+        </main>
+    </body>
+    <script src="js/main.js"></script>
+</html>

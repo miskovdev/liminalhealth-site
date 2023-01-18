@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="achieves-box">
+        <h2>{{ achievements.title }}</h2>
+        <!--<div class="achieves-description">{{ achievements.subtitle }}</div>-->
+        <div class="achieves-grid">
+            {{#each achievements.list}}
+                <div class="achieves-item">
+                    <div class="achieves-item-value">{{ this.value }}</div>
+                    <div class="achieves-item-name">{{ this.name }}</div>
+                </div>
+            {{/each}}
+        </div>
+        <div class="text-center">
+            <a href="{{ achievements.actionUrl }}" class="button button-black uppercase">{{ achievements.actionName }}</a>
+        </div>
+    </div>
+</div>

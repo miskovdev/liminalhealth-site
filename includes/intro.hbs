@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="main-grid">
+        <div class="main-content-text">
+            <h3>{{{ intro.title }}}</h3>
+            {{{ renderMarkdown intro.text }}}
+            <div class="text-right uppercase">
+                <a href="{{ intro.actionUrl }}" class="button">{{ intro.actionName }} <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </div>
+        {{#if (isNotEmpty intro.imageUrl)}}
+            <div class="main-content-image">
+                <img src="{{ intro.imageUrl }}" alt="{{ intro.title }}">
+            </div>
+        {{/if}}
+    </div>
+</div>

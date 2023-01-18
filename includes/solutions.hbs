@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="solutions-box">
+        <h2>{{ solutions.title }}</h2>
+        <div class="solutions-description">{{{ solutions.description }}}</div>
+        <div class="solutions-grid">
+            {{#each solutions.list}}
+                <div class="solutions-item">
+                    <div class="solutions-item-name">{{ this.name }}</div>
+                    <div class="solutions-item-desc">{{ this.description }}</div>
+                    <a href="{{ this.actionUrl }}" class="button button-white uppercase">{{ this.actionName }}</a>
+                </div>
+            {{/each}}
+        </div>
+        <a href="{{ solutions.actionUrl }}" class="button button-black solutions-more uppercase">{{ solutions.actionName }}</a>
+    </div>
+</div>

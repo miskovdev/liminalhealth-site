@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="text-center">{{ content.title }}</h2>
+    <div class="diffs-box">
+        <h3>{{ content.subtitle }}</h3>
+        <div class="diffs-description">
+            {{{ wrapParagraph content.description }}}
+        </div>
+        <div class="diffs-grid">
+            {{#each content.list}}
+                <div class="diffs-item">
+                    <div class="diffs-item-value">{{ this.value }}</div>
+                    <div class="diffs-item-name">{{ this.name }}</div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

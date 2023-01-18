@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="main-grid">
+        <div class="main-content-text">
+            <h2>{{ nsa.title }}</h2>
+            {{{ renderMarkdown nsa.text }}}
+            <div class="main-content-subtitle">{{ nsa.subtitle }}</div>
+            <div class="main-content-buttons">
+                <a href="{{ nsa.actionUrl }}" class="button button-dark button-wide">{{ nsa.actionName }}</a>
+                <a href="#" class="button button-white open-modal">{{ nsa.actionPopupName }}</a>
+            </div>
+        </div>
+        {{#if (isNotEmpty nsa.imageUrl)}}
+            <div class="main-content-image">
+                <img src="{{ nsa.imageUrl }}" alt="{{ nsa.title }}">
+            </div>
+        {{/if}}
+    </div>
+</div>
