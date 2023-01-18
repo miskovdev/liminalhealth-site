@@ -14,18 +14,15 @@ Run powershell or terminal in the project folder and run
 
     `npm install`
 
-After packages installation you'll be able to
-- Edit and see results with live reload in your browser by running
-    
+After packages installation you'll be able to:
+
+**Edit and see results with live reload in your browser by running**
 
     npm run dev
 
-
-- Build whole project
-
+**Build whole project**
 
     npm run build
-
 
 All built files are located in the `_site` directory and ready to deploy.
 
